@@ -33,12 +33,13 @@
 
 - Full CRUD front-end and back-end
 - Three tables: Users, Books, Reviews
-- Utilize multiple one-to-many relationships
+- Three one-to-many relationshipe: users to books, users to reviews, books to reviews
+- Sucessfully implement with React and Rails
 
 ### Challenges
 
-- Contitionals on most buttons to only show when logged in
-- CRUD for both books and the reviews
+- Conditionals on most buttons to only show when logged in
+- CRUD for both books and reviews of books
 - Responsive styling
 
 <br>
@@ -55,6 +56,7 @@
 |       Rails      | Backend |
 |      bcrypt      | Encode/decode |
 |        jwt       | Authentication |
+|        faker     | Fake some data |
 
 <br>
 
@@ -75,24 +77,20 @@ src
       |__ images
       |__ mockups
 |__ components/
-      |__ BookCards
-      |__ ReviewCards
       |__ shared/
           |__ Footer
           |__ Layout
           |__ Nav
 |__ containers/
-       |__ 
+       |__ MainContainer.jsx
 |__ screens/
-       |__ Home
-       |__ BookDetail
-       |__ BookCreate
-       |__ BookEdit
-       |__ ReviewCreate
-       |__ ReviewEdit
-       |__ SignIn
-       |__ SignOut
-       |__ SignUp
+       |__ BookDetail.jsx
+       |__ BookCreate.jsx
+       |__ BookEdit.jsx
+       |__ ReviewCreate.jsx
+       |__ ReviewEdit.jsx
+       |__ SignIn.jsx
+       |__ SignUp.jsx
 |__ services/
        |__ api-config.js
        |__ auth.js
@@ -109,9 +107,18 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Backend Rails setup |    H     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+| Backend Rails setup |    H     |     3 hrs      |    TBD    |    TBD   |
+| Backend CRUD Actions|    H     |     3 hrs      |     TBD     |     TBD     |
+| Authentication|    H     |     10 hrs      |     TBD     |     TBD     |
+| Frontend React setup|    H     |     3 hrs      |     TBD     |     TBD     |
+| Create Books Component|    H     |     5 hrs      |     TBD     |     TBD     |
+| Edit Books Component|    H     |     5 hrs      |     TBD     |     TBD     |
+| Create Reviews Component|    H     |     5 hrs      |     TBD     |     TBD     |
+| Edit Reviews Component|    L     |     5 hrs      |     TBD     |     TBD     |
+| Basic CSS Styling |    H     |     8 hrs      |     TBD     |     TBD     |
+| Responsive CSS / Media Queries|    L     |     5 hrs      |     TBD     |     TBD     |
+| Deployment|    H     |     2 hrs      |     TBD     |     TBD     |
+| TOTAL               |          |     55 hrs      |     TBD     |     TBD     |
 
 
 

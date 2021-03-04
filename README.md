@@ -86,10 +86,10 @@ src
 |__ screens/
        |__ Home
        |__ BookDetail
-       |__ AddBook
-       |__ EditBook
-       |__ AddReview
-       |__ EditReview
+       |__ BookCreate
+       |__ BookEdit
+       |__ ReviewCreate
+       |__ ReviewEdit
        |__ SignIn
        |__ SignOut
        |__ SignUp
@@ -103,13 +103,13 @@ src
 
 #### Component Tree
 
-[Component tree](url)
+![Component tree](https://res.cloudinary.com/doas1ztbf/image/upload/v1614888454/P4%20Component%20Hierarchy.png)
 
 #### Time Estimates
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| Backend Rails setup |    H     |     3 hrs      |     2 hrs     |    3 hrs    |
 | Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
 | TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
 
@@ -121,7 +121,7 @@ src
 
 #### ERD Model
 
-[ERD Model](https://res.cloudinary.com/doas1ztbf/image/upload/v1614874534/P4ERD.png)
+![ERD Model](https://res.cloudinary.com/doas1ztbf/image/upload/v1614874534/P4ERD.png)
 
 <br>
 

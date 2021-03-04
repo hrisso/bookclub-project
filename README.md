@@ -2,13 +2,11 @@
 
 - [Overview](#overview)
 - [MVP](#mvp)
-  - [Goals](#goals)
   - [Libraries and Dependencies](#libraries-and-dependencies)
   - [Client (Front End)](#client-front-end)
     - [Wireframes](#wireframes)
-    - [Component Tree](#component-tree)
     - [Component Hierarchy](#component-hierarchy)
-    - [Component Breakdown](#component-breakdown)
+    - [Component Tree](#component-tree)
     - [Time Estimates](#time-estimates)
   - [Server (Back End)](#server-back-end)
     - [ERD Model](#erd-model)
@@ -66,31 +64,6 @@
 
 ![Dummy Link](url)
 
-- Desktop Landing
-
-![Dummy Link](url)
-
-- Desktop Hero
-
-![Dummy Link](url)
-
-- Resource Index
-
-![Dummy Link](url)
-
-- Resource Show
-
-![Dummy Link](url)
-
-- Tablet Resource Index
-
-![Dummy Link](url)
-
-- Mobile Resource Index
-
-#### Component Tree
-
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. 
 
 #### Component Hierarchy
 
@@ -102,21 +75,33 @@ src
       |__ images
       |__ mockups
 |__ components/
-      |__ Header.jsx
+      |__ BookCards
+      |__ ReviewCards
+      |__ shared/
+          |__ Footer
+          |__ Layout
+          |__ Nav
 |__ containers/
        |__ 
-|__ shared/
-       |__ Layout
 |__ screens/
        |__ Home
-       |__ 
+       |__ BookDetail
+       |__ AddBook
+       |__ EditBook
+       |__ AddReview
+       |__ EditReview
+       |__ SignIn
+       |__ SignOut
+       |__ SignUp
 |__ services/
+       |__ api-config.js
+       |__ auth.js
+       |__ books.js
+       |__ reviews.js
 
 ```
 
 #### Component Tree
-
-
 
 [Component tree](url)
 
@@ -136,7 +121,7 @@ src
 
 #### ERD Model
 
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
+[ERD Model](https://res.cloudinary.com/doas1ztbf/image/upload/v1614874534/P4ERD.png)
 
 <br>
 
@@ -147,6 +132,7 @@ src
 - Search functionality
 - Image carousel
 - Amazon links to purchase books
+- Add ratings to reviews
 
 ***
 

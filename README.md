@@ -56,7 +56,7 @@
 |       Rails      | Backend |
 |      bcrypt      | Encode/decode |
 |        jwt       | Authentication |
-|        faker     | Fake some data |
+|        faker     | Fake data |
 
 <br>
 
@@ -64,8 +64,16 @@
 
 #### Wireframes
 
-![Dummy Link](url)
-
+![Wireframes](https://res.cloudinary.com/doas1ztbf/image/upload/v1614908308/Web_1920_1_pci58b.png)
+![Wireframes](https://res.cloudinary.com/doas1ztbf/image/upload/v1614908310/Web_1920_2_sxuzdy.png)
+![Wireframes](https://res.cloudinary.com/doas1ztbf/image/upload/v1614908308/Web_1920_3_tfccxc.png)
+![Wireframes](https://res.cloudinary.com/doas1ztbf/image/upload/v1614908307/Web_1920_4_q1rkdr.png)
+![Wireframes](https://res.cloudinary.com/doas1ztbf/image/upload/v1614908308/Web_1920_5_knzuid.png)
+![Wireframes](https://res.cloudinary.com/doas1ztbf/image/upload/v1614908309/Web_1920_6_xr6c2p.png)
+![Wireframes](https://res.cloudinary.com/doas1ztbf/image/upload/v1614908308/Web_1920_7_gwp5hu.png)
+![Wireframes](https://res.cloudinary.com/doas1ztbf/image/upload/v1614908309/Web_1920_8_bkfqxv.png)
+![Wireframes](https://res.cloudinary.com/doas1ztbf/image/upload/v1614908309/Web_1920_9_dbkury.png)
+![Wireframes](https://res.cloudinary.com/doas1ztbf/image/upload/v1614908309/Web_1920_10_yherom.png)
 
 #### Component Hierarchy
 
@@ -108,7 +116,7 @@ src
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
 | Backend Rails setup |    H     |     3 hrs      |    TBD    |    TBD   |
-| Backend CRUD Actions|    H     |     3 hrs      |     TBD     |     TBD     |
+| Backend CRUD Actions|    H     |     4 hrs      |     TBD     |     TBD     |
 | Authentication|    H     |     10 hrs      |     TBD     |     TBD     |
 | Frontend React setup|    H     |     3 hrs      |     TBD     |     TBD     |
 | Create Books Component|    H     |     5 hrs      |     TBD     |     TBD     |

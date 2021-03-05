@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :reviews
+  resources :books
   resources :users, only: :create
   post '/auth/login', to: 'authentication#login'
   get '/auth/verify', to: 'authentication#verify'

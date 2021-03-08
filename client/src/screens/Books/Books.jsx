@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Books(props) {
-  const { books, currentUser, handleDelete } = props;
+  const { books, currentUser} = props;
 
   return (
     <>
@@ -17,12 +17,6 @@ export default function Books(props) {
             <h3>{book.title}</h3>
           </div>
         </Link>
-        { book.user_id === currentUser?.id &&
-          <>
-            <Link to={`/books/${book.id}/edit`}><button>Edit</button></Link>
-            <button onClick={() => handleDelete(book.id)}>Delete</button>
-          </>
-        }
       </React.Fragment>
     ))}
     </>

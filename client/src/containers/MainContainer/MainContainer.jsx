@@ -40,29 +40,29 @@ export default function MainContainer(props) {
   }
 
   return (
-    <>
-      <Books
+    <Switch>
+      <Route path='/books/new'>
+        <BookCreate handleCreate={handleCreate} />
+      </Route>
+      <Route path='/books/:id/edit'>
+        <BookEdit
+          books={books}
+          handleUpdate={handleUpdate}
+        />
+      </Route>
+      <Route path='/books/:id'>
+        <BookDetail
+        currentUser={currentUser}
+        handleDelete={handleDelete}
+        />
+      </Route>
+      <Route path='/'>
+        <Books
         books={books}
         currentUser={currentUser}
         handleDelete={handleDelete}
-      />
-      <Switch>
-        <Route path='/books/new'>
-          <BookCreate handleCreate={handleCreate} />
-        </Route>
-        <Route path='/books/:id/edit'>
-          <BookEdit
-            books={books}
-            handleUpdate={handleUpdate}
-          />
-        </Route>
-        <Route path='/books/:id'>
-          <BookDetail
-          currentUser={currentUser}
-          handleDelete={handleDelete}
-          />
-        </Route>
-      </Switch>
-    </>
+        />
+      </Route>
+    </Switch>
   );
 }

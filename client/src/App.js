@@ -1,16 +1,74 @@
 import './App.css';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, useHistory } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { loginUser, registerUser, verifyUser, removeToken } from './services/auth';
 import Layout from './components/Layout/Layout';
 import MainContainer from './containers/MainContainer/MainContainer';
+import SignIn from './screens/SignIn/SignIn';
+import SignUp from './screens/SignUp/SignUp';
 
 function App() {
+  const [currentUser, setCurrentUser] = useState(null);
+  const [error, setError] = useState(null);
+  const history = useHistory();
+
+  useEffect(() => {
+    const handleVerify = async () => {
+      const currentUser = await verifyUser();
+      setCurrentUser(currentUser)
+    }
+    handleVerify();
+  }, [])
+
+  const handleLogin = async (formData) => {
+    try {
+      const currentUser = await loginUser(formData);
+      setCurrentUser(currentUser);
+      setError(null);
+      history.push('/');
+    } catch (e) {
+      setError("Invalid Login Credentials");
+    }
+  }
+
+  const handleRegister = async (formData) => {
+    try {
+      const currentUser = await registerUser(formData);
+      setCurrentUser(currentUser);
+      history.push('/');
+    } catch (e) {
+      setError("Invalid Registration Credentials")
+    }
+  }
+
+  const handleLogout = () => {
+    setCurrentUser(null);
+    localStorage.removeItem('authToken');
+    removeToken();
+  }
+
   return (
     <div className="App">
-      <Layout>
+      <Layout
+        currentUser={currentUser}
+        handleLogout={handleLogout}
+      >
         <Switch>
-          <h1>LET'S GO</h1>
+          <Route path='/login'>
+            <SignIn
+              handleLogin={handleLogin}
+              error={error}
+            />
+          </Route>
+          <Route path='/register'>
+            <SignUp
+              handleRegister={handleRegister}
+            />
+          </Route>
           <Route path='/'>
-            <MainContainer />
+            <MainContainer
+              currentUser={currentUser}
+            />
           </Route>
         </Switch>
       </Layout>

@@ -14,7 +14,7 @@ export default function Nav(props) {
           currentUser ?
             <>
               <p>Hello, {currentUser.username}</p>
-              <Link onClick={handleLogout}>Logout</Link>
+              <button onClick={handleLogout}>Logout</button>
             </>
             :
             <Link to='/login'>Login/Register</Link>

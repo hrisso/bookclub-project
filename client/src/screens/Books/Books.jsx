@@ -6,7 +6,7 @@ export default function Books(props) {
   const { books, currentUser} = props;
 
   return (
-    <>
+    <div>
     { currentUser &&
       <Link to='/books/new'><button>Create</button></Link>
     }
@@ -20,6 +20,6 @@ export default function Books(props) {
         </Link>
       </React.Fragment>
     ))}
-    </>
+    </div>
   )
 }

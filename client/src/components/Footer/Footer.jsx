@@ -5,8 +5,8 @@ export default function Footer() {
   return (
     <footer>
       <p>Hooked on Books</p>
-      <a href="https://github.com/hrisso/bookclub-project" target="_blank" alt="Github">
-        <img src="http://pngimg.com/uploads/github/github_PNG45.png"/>
+      <a href="https://github.com/hrisso/bookclub-project" target="_blank" rel="noreferrer" alt="Github">
+        <img src="http://pngimg.com/uploads/github/github_PNG45.png" alt="Github"/>
       </a> 
     </footer>
   )

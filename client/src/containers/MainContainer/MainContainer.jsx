@@ -58,7 +58,7 @@ export default function MainContainer(props) {
         handleDelete={handleDelete}
         />
       </Route>
-      <Route path='/'>
+      <Route exact path='/'>
         <Books
         books={books}
         currentUser={currentUser}

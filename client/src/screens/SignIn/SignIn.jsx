@@ -27,6 +27,10 @@ export default function SignIn(props) {
         handleLogin(formData);
       }}>
         <h3>Login</h3>
+        <div className="not-a-member">
+          <p>Not a member?</p>
+          <Link to='/register'><h4>Register</h4></Link>
+        </div>
         {
           error &&
           <p>{error}</p>
@@ -49,10 +53,6 @@ export default function SignIn(props) {
             onChange={handleChange}
           />
         </label>
-        <div className="not-a-member">
-          <p>Not a member?</p>
-          <Link to='/register'><h4>Register</h4></Link>
-        </div>
         <button>Submit</button>
       </form>
     </div>

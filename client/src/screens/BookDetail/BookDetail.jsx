@@ -27,7 +27,14 @@ export default function BookDetail(props) {
             <Link to={`/books/${book?.id}/edit`}><button>Edit</button></Link>
             <button onClick={() => handleDelete(book?.id)}>Delete</button>
           </>
-        }
+      }
+      <h2>Reviews</h2>
+      { book?.reviews.map((review) => (
+        <React.Fragment key={review.id}>
+          <h3>{review.title}</h3>
+          <p>{review.content}</p>
+        </React.Fragment>
+      ))}
     </div>
   )
 }

@@ -49,6 +49,45 @@
   color: #F9F9F9;
 }
 
+.review-title {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: left;
+  margin-left: 10%;
+}
+
+.reviews {
+  align-self: flex-start;
+  margin: 15px 10%;
+  padding: 20px 10px;
+  border: 2px solid #8ea8c3ff;
+  border-radius: 5px;
+}
+
+.reviews button {
+  background-color: #23395bff;
+  color: #cbf7edff;
+  border-radius: 5px;
+  border: none;
+  font-size: 12px;
+  padding: 10px 10px;
+  margin: 10px 5px;
+  width: 80px;
+  font-family: 'Roboto Slab', serif;
+}
+
+.review-button {
+  background-color: #23395bff;
+  color: #cbf7edff;
+  border-radius: 5px;
+  border: none;
+  font-size: 15px;
+  padding: 10px 20px;
+  margin: 10px 5px;
+  width: 140px;
+  font-family: 'Roboto Slab', serif;
+}
+
 @media screen and (max-width:800px) {
   
   .book-detail {

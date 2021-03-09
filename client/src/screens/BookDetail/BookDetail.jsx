@@ -1,4 +1,5 @@
 import React from 'react';
+import './BookDetail.css';
 import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { getOneBook } from '../../services/books';

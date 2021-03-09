@@ -43,16 +43,20 @@ export default function BookDetail(props) {
 
   return (
     <>
-      <img src={book?.img_url} alt={book?.title}/>
-      <h3>{book?.title}</h3>
-      <h4>{book?.author}</h4>
-      <p>{book?.description}</p>
-      { book?.user_id === currentUser?.id &&
-          <>
-            <Link to={`/books/${book?.id}/edit`}><button>Edit</button></Link>
-            <button onClick={() => handleDelete(book?.id)}>Delete</button>
-          </>
-      }
+      <div className="book-detail">
+        <img src={book?.img_url} alt={book?.title} />
+        <div className="detail">
+        <h3 className="title">{book?.title}</h3>
+        <h4 className="author">{book?.author}</h4>
+        <p className="description">{book?.description}</p>
+        { book?.user_id === currentUser?.id &&
+            <div className="button-container">
+              <Link to={`/books/${book?.id}/edit`}><button>Edit</button></Link>
+              <button onClick={() => handleDelete(book?.id)}>Delete</button>
+            </div>
+        }
+        </div>
+      </div>
       <h2>Reviews</h2>
       <Link to='/reviews/new'><button>Add a Review</button></Link>
       { book?.reviews.map((review) => (

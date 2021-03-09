@@ -29,6 +29,7 @@ export default function MainContainer(props) {
   const handleDelete = async (id) => {
     await destroyBook(id);
     setBooks(prevState => prevState.filter((book) => book.id !== id))
+    history.push('/');
   }
 
   const handleUpdate = async (id, formData) => {

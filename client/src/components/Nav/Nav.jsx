@@ -6,21 +6,21 @@ export default function Nav(props) {
   const { currentUser, handleLogout } = props;
 
   return (
-    <div>
-      <nav>
+      <nav className="nav">
         <Link to='/'>
           <h1>Book Club</h1>
         </Link>
-        {
-          currentUser ?
-            <>
-              <p>Hello, {currentUser.username}</p>
-              <button onClick={handleLogout}>Logout</button>
-            </>
-            :
-            <Link to='/login'>Login/Register</Link>
-        }
+        <div className="nav-right">
+          {
+            currentUser ?
+              <>
+                <p>Hello, {currentUser.username}</p>
+                <button onClick={handleLogout}>Logout</button>
+              </>
+              :
+              <Link to='/login'><p>Login/Register</p></Link>
+          }
+        </div>
       </nav>
-    </div>
   )
 }

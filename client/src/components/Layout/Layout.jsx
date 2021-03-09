@@ -13,6 +13,7 @@ export default function Layout(props) {
         currentUser={currentUser}
         handleLogout={handleLogout}
       />
+      <div className="image-container"></div>
       {props.children}
       <Footer />
     </div>

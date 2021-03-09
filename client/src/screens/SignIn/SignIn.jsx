@@ -20,35 +20,41 @@ export default function SignIn(props) {
   }
 
   return (
-    <form onSubmit={(e) => {
-      e.preventDefault();
-      handleLogin(formData);
-    }}>
-      <h3>Login</h3>
-      {
-        error &&
-        <p>{error}</p>
-      }
-      <label>
-        Username:
-        <input
-          type='text'
-          name='username'
-          value={username}
-          onChange={handleChange}
-        />
-      </label>
-      <label>
-        Password:
-        <input
-          type='password'
-          name='password'
-          value={password}
-          onChange={handleChange}
-        />
-      </label>
-      <Link to='/register'><h4>Register</h4></Link>
-      <button>Submit</button>
-    </form>
+    <div className="login-container">
+      <form className="sign-in-form"
+        onSubmit={(e) => {
+        e.preventDefault();
+        handleLogin(formData);
+      }}>
+        <h3>Login</h3>
+        {
+          error &&
+          <p>{error}</p>
+        }
+        <label>
+          Username:
+          <input
+            type='text'
+            name='username'
+            value={username}
+            onChange={handleChange}
+          />
+        </label>
+        <label>
+          Password:
+          <input
+            type='password'
+            name='password'
+            value={password}
+            onChange={handleChange}
+          />
+        </label>
+        <div className="not-a-member">
+          <p>Not a member?</p>
+          <Link to='/register'><h4>Register</h4></Link>
+        </div>
+        <button>Submit</button>
+      </form>
+    </div>
   )
 }

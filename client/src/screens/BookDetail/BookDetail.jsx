@@ -29,11 +29,12 @@ export default function BookDetail(props) {
           </>
       }
       <h2>Reviews</h2>
+      <button>Add a Review</button>
       { book?.reviews.map((review) => (
-        <React.Fragment key={review.id}>
+        <div className="reviews" key={review.id}>
           <h3>{review.title}</h3>
           <p>{review.content}</p>
-        </React.Fragment>
+        </div>
       ))}
     </div>
   )

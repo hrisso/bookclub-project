@@ -3,7 +3,6 @@
   font-family: 'Roboto Slab', serif;
 }
 
-img {
-  height: 100px;
-  width: auto;
+a {
+  text-decoration: none;
 }

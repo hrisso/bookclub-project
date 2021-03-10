@@ -19,7 +19,7 @@
 
 .book-card {
   width: 20vw;
-  height: 32vh;
+  height: 40vh;
   align-self: flex-start;
   margin: 15px;
   padding: 20px 10px;
@@ -84,7 +84,7 @@
   
   .book-card {
     width: 85vw;
-    height: 50vh;
+    height: 35vh;
   }
 
   .book-card img {

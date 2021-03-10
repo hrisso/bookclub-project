@@ -18,7 +18,7 @@ export default function ReviewContainer(props) {
     const fetchBook = async () => {
       const bookData = await getOneBook(id);
       setBook(bookData);
-      setReviews(bookData.reviews)
+      setReviews(bookData.reviews);
     }
     fetchBook();
   }, [id])

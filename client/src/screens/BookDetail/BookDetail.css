@@ -49,6 +49,11 @@
   font-family: "Roboto Slab", serif;
 }
 
+.button-container button:hover {
+  color: #23395bff;
+  background-color: #cbf7edff;
+}
+
 .button-container a {
   text-decoration: none;
   color: #f9f9f9;
@@ -86,6 +91,11 @@
   font-family: "Roboto Slab", serif;
 }
 
+.reviews button:hover {
+  color: #23395bff;
+  background-color: #cbf7edff;
+}
+
 .review-button {
   background-color: #23395bff;
   color: #cbf7edff;
@@ -96,6 +106,11 @@
   margin: 10px 50px;
   width: 140px;
   font-family: "Roboto Slab", serif;
+}
+
+.review-button:hover {
+  color: #23395bff;
+  background-color: #cbf7edff;
 }
 
 @media screen and (max-width: 800px) {

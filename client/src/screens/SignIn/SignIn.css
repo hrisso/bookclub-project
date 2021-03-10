@@ -52,3 +52,8 @@
   width: 130px;
   font-family: 'Roboto Slab', serif;
 }
+
+.sign-in-form button:hover {
+  color: #23395bff;
+  background-color: #cbf7edff;
+}

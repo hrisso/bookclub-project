@@ -19,7 +19,7 @@
 
 .book-card {
   width: 20vw;
-  height: 35vh;
+  height: 32vh;
   align-self: flex-start;
   margin: 15px;
   padding: 20px 10px;
@@ -49,6 +49,11 @@
   margin: 10px 5px;
   width: 130px;
   font-family: 'Roboto Slab', serif;
+}
+
+.books-container button:hover {
+  color: #23395bff;
+  background-color: #cbf7edff;
 }
 
 .card-title {

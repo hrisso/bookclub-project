@@ -43,11 +43,11 @@ export default function BookEdit(props) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="book-edit-form"
+      onSubmit={handleSubmit}>
       <h3>Edit Book</h3>
-      <div className="image-container">
-        <img className="edit-product-image" src={formData.img_url} alt={formData.title} />
-      </div>
+      <div className="edit-image-container">
+        <img className="edit-book-image" src={formData.img_url} alt={formData.title} />
       <label>Image Link:
         <input
           type='text'
@@ -56,6 +56,8 @@ export default function BookEdit(props) {
           onChange={handleChange}
         />
       </label>
+      </div>
+      <div className="book-edit-fields">
       <label>Title:
         <input
           type='text'
@@ -73,14 +75,16 @@ export default function BookEdit(props) {
         />
       </label>
       <label>Description:
-        <input
+        <textarea
           type='text'
+          rows={10}
           name='description'
           value={formData.description}
           onChange={handleChange}
         />
       </label>
-      <button>Submit</button>
+        <button>Submit</button>
+      </div>
     </form>
   )
 }

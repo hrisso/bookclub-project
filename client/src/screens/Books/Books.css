@@ -17,6 +17,8 @@
 }
 
 .book-card {
+  width: 20vw;
+  height: 40vh;
   align-self: flex-start;
   margin: 15px;
   padding: 20px 10px;
@@ -30,8 +32,8 @@
 }
 
 .book-card img {
-  width: 20vw;
-  height: 20vw;
+  width: 10vw;
+  height: 10vw;
   object-fit: cover;
   padding: 10px;
 }
@@ -55,11 +57,24 @@
   padding: 10px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1000px) {
   
   .book-card {
-    width: 80%;
-    height: 50%;
+    width: 40vw;
+    height: 40vh;
+  }
+
+  .book-card img {
+    width: 25vw;
+    height: 25vw;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  
+  .book-card {
+    width: 85vw;
+    height: 50vh;
   }
 
   .book-card img {

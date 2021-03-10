@@ -1,11 +1,10 @@
 import React from "react";
-import './MainContainer.css';
 import { useState, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
 import { destroyBook, getAllBooks, postBook, putBook } from '../../services/books';
 import Books from '../../screens/Books/Books';
 import BookCreate from '../../screens/BookCreate/BookCreate';
-import BookDetail from '../../screens/BookDetail/BookDetail';
+import ReviewContainer from '../ReviewContainer/ReviewContainer';
 import BookEdit from '../../screens/BookEdit/BookEdit';
 
 export default function MainContainer(props) {
@@ -44,7 +43,9 @@ export default function MainContainer(props) {
   return (
     <Switch>
       <Route path='/books/new'>
-        <BookCreate handleCreate={handleCreate} />
+        <BookCreate
+          handleCreate={handleCreate}
+        />
       </Route>
       <Route path='/books/:id/edit'>
         <BookEdit
@@ -53,7 +54,7 @@ export default function MainContainer(props) {
         />
       </Route>
       <Route path='/books/:id'>
-        <BookDetail
+        <ReviewContainer
         currentUser={currentUser}
         handleDelete={handleDelete}
         />

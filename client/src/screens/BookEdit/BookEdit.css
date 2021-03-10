@@ -52,6 +52,11 @@
   font-family: 'Roboto Slab', serif;
 }
 
+.book-edit-form button:hover {
+  color: #23395bff;
+  background-color: #cbf7edff;
+}
+
 @media screen and (max-width:500px) {
   
   .edit-book-image {

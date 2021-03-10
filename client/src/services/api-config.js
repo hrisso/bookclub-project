@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseUrl = process.env.NODE_ENV === 'production' ? "http://bookclub-project.herokuapp.com/" : 'http://localhost:3000'
+const baseUrl = process.env.NODE_ENV === 'production' ? "https://bookclub-project.herokuapp.com/" : 'http://localhost:3000'
 
 const api = axios.create({
   baseURL: baseUrl

@@ -3,7 +3,7 @@ import { Switch, Route, useHistory } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { loginUser, registerUser, verifyUser, removeToken } from './services/auth';
 import Layout from './components/Layout/Layout';
-import MainContainer from './containers/MainContainer/MainContainer';
+import MainContainer from './containers/MainContainer';
 import SignIn from './screens/SignIn/SignIn';
 import SignUp from './screens/SignUp/SignUp';
 

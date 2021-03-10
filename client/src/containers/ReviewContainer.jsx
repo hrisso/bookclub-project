@@ -1,10 +1,10 @@
 import React from 'react';
 import { useState } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
-import { destroyReview, postReview, putReview } from '../../services/reviews';
-import BookDetail from '../../screens/BookDetail/BookDetail';
-import ReviewCreate from '../../screens/ReviewCreate/ReviewCreate';
-import ReviewEdit from '../../screens/ReviewEdit/ReviewEdit';
+import { destroyReview, postReview, putReview } from '../services/reviews';
+import BookDetail from '../screens/BookDetail/BookDetail';
+import ReviewCreate from '../screens/ReviewCreate/ReviewCreate';
+import ReviewEdit from '../screens/ReviewEdit/ReviewEdit';
 
 export default function ReviewContainer(props) {
   const [reviews, setReviews] = useState([]);

@@ -1,11 +1,11 @@
 import React from "react";
 import { useState, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
-import { destroyBook, getAllBooks, postBook, putBook } from '../../services/books';
-import Books from '../../screens/Books/Books';
-import BookCreate from '../../screens/BookCreate/BookCreate';
-import ReviewContainer from '../ReviewContainer/ReviewContainer';
-import BookEdit from '../../screens/BookEdit/BookEdit';
+import { destroyBook, getAllBooks, postBook, putBook } from '../services/books';
+import Books from '../screens/Books/Books';
+import BookCreate from '../screens/BookCreate/BookCreate';
+import ReviewContainer from './ReviewContainer';
+import BookEdit from '../screens/BookEdit/BookEdit';
 
 export default function MainContainer(props) {
   const [books, setBooks] = useState([]);

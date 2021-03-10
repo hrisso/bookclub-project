@@ -40,7 +40,7 @@ export default function ReviewCreate(props) {
       <label>Content:
         <textarea
           type='text'
-          rows={10}
+          rows={8}
           name='content'
           value={formData.content}
           onChange={handleChange}

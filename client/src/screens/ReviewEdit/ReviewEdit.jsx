@@ -39,7 +39,8 @@ export default function ReviewEdit(props) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div className="edit-review-container">
+    <form className="edit-review-form" onSubmit={handleSubmit}>
       <h3>Edit Review</h3>
       <label>Title:
         <input
@@ -58,6 +59,7 @@ export default function ReviewEdit(props) {
         />
       </label>
       <button>Submit</button>
-    </form>
+      </form>
+    </div>
   )
 }

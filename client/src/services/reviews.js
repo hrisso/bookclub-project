@@ -1,26 +1,16 @@
 import api from './api-config';
 
-export const getAllReviews = async () => {
-  const resp = await api.get('/reviews');
+export const postReview = async (bookId, reviewData) => {
+  const resp = await api.post(`books/${bookId}/reviews`, { review: reviewData });
   return resp.data;
 }
 
-export const getOneReview = async (id) => {
-  const resp = await api.get(`/reviews/${id}`);
+export const putReview = async (bookId, id, reviewData) => {
+  const resp = await api.put(`/books/${bookId}/reviews/${id}`, { review: reviewData });
   return resp.data;
 }
 
-export const postReview = async (reviewData) => {
-  const resp = await api.post('/reviews', { review: reviewData });
-  return resp.data;
-}
-
-export const putReview = async (id, reviewData) => {
-  const resp = await api.put(`/reviews/${id}`, { review: reviewData });
-  return resp.data;
-}
-
-export const destroyReview = async (id) => {
-  const resp = await api.delete(`/reviews/${id}`);
+export const destroyReview = async (bookId, id) => {
+  const resp = await api.delete(`/books/${bookId}/reviews/${id}`);
   return resp;
 }

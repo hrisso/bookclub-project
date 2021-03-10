@@ -18,6 +18,7 @@ class ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     @review.user = @current_user
+    @review.book = @bookid
 
     if @review.save
       render json: @review, status: :created, location: @review

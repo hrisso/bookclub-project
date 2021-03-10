@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { Switch, Route, useHistory, useParams } from 'react-router-dom';
+import { Switch, Route, useHistory } from 'react-router-dom';
 import { destroyReview, postReview, putReview } from '../services/reviews';
 import BookDetail from '../screens/BookDetail/BookDetail';
 import ReviewCreate from '../screens/ReviewCreate/ReviewCreate';
@@ -9,25 +9,23 @@ import ReviewEdit from '../screens/ReviewEdit/ReviewEdit';
 export default function ReviewContainer(props) {
   const [reviews, setReviews] = useState([]);
   const { currentUser, handleDelete } = props;
-  const { bookid } = useParams();
   const history = useHistory();
 
-
-  const handleCreateReview = async (formData) => {
+  const handleCreateReview = async (bookid, formData) => {
     const newReview = await postReview(bookid, formData);
     setReviews(prevState => [...prevState, newReview]);
-    history.push(`/books/${bookid}`);
+    history.push(`/`);
   }
 
-  const handleUpdateReview = async (id, formData) => {
+  const handleUpdateReview = async (bookid, id, formData) => {
     const updatedReview = await putReview(bookid, id, formData);
     setReviews(prevState => prevState.map((review) => {
       return review.id === Number(id) ? updatedReview : review
     }));
-    history.push(`/books/${bookid}`);
+    history.push(`/`);
   }
 
-  const handleDeleteReview = async (id) => {
+  const handleDeleteReview = async (bookid, id) => {
     await destroyReview(bookid, id);
     setReviews(prevState => prevState.filter((review) => review.id !== id))
   }

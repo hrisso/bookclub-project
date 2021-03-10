@@ -1,8 +1,10 @@
 import React from 'react';
 import './ReviewCreate.css';
 import { useState } from 'react';
+import { useParams } from 'react-router-dom';
 
 export default function ReviewCreate(props) {
+  const { bookid } = useParams();
   const [formData, setFormData] = useState({
     title: '',
     content: ''
@@ -20,7 +22,7 @@ export default function ReviewCreate(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    handleCreateReview(formData);
+    handleCreateReview(bookid, formData);
   }
 
   return (

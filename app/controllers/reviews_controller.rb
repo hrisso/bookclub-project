@@ -18,7 +18,7 @@ class ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     @review.user = @current_user
-    @review.book = @book_id
+    @review.book = Book.find(params[:book_id])
 
     if @review.save
       render json: @review, status: :created, location: @review

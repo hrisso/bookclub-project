@@ -26,11 +26,14 @@ export default function BookCreate(props) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form
+      className="add-book-form"
+      onSubmit={handleSubmit}>
       <h3>Add a Book</h3>
-      <div className="image-container">
-        <img className="edit-product-image" src={formData.img_url} alt={formData.title} />
+      <div className="add-image-container">
+        <img className="add-book-image" src={formData.img_url} alt={formData.title} />
       </div>
+      <div className="add-book-fields">
       <label>Image Link:
         <input
           type='text'
@@ -56,13 +59,15 @@ export default function BookCreate(props) {
         />
       </label>
       <label>Description:
-        <input
+        <textarea
           type='text'
+          rows={10}
           name='description'
           value={formData.description}
           onChange={handleChange}
         />
-      </label>
+        </label>
+      </div>
       <button>Submit</button>
     </form>
   )

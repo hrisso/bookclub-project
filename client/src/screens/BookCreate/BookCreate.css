@@ -1,0 +1,61 @@
+.add-book-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 20%;
+  border: 2px solid #8ea8c3ff;
+  border-radius: 5px;
+}
+
+.add-book-form h3 {
+  font-size: 30px;
+  margin-bottom: 0px;
+}
+
+.add-image-container,
+.add-book-fields {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-book-image {
+  margin: 20px 0px;
+  width: 40%;
+  height: auto;
+  border: 1px solid #8ea8c3ff;
+}
+
+.add-book-fields input,
+.add-book-fields textarea,
+.add-image-container input {
+  width: 80%;
+  margin: 10px;
+  border: 2px solid gray;
+  border-radius: 2px;
+  font-size: 15px;
+  font-family: 'Roboto Slab', serif;
+}
+
+.add-book-form button {
+  background-color: #23395bff;
+  color: #cbf7edff;
+  border-radius: 5px;
+  border: none;
+  font-size: 15px;
+  padding: 10px 20px;
+  margin: 40px 5px;
+  width: 130px;
+  font-family: 'Roboto Slab', serif;
+}
+
+@media screen and (max-width:500px) {
+  
+  .add-book-image {
+    align-self: center;
+    margin: 20px;
+    width: 50%;
+  }
+}

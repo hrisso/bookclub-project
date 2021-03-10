@@ -49,7 +49,9 @@
   font-family: "Roboto Slab", serif;
 }
 
-.button-container button:hover {
+.button-container button:hover,
+.reviews button:hover,
+.review-button:hover {
   color: #23395bff;
   background-color: #cbf7edff;
 }
@@ -74,7 +76,7 @@
 .reviews {
   align-self: flex-start;
   margin: 15px 10%;
-  padding: 20px 10px;
+  padding: 20px 30px;
   border: 2px solid #8ea8c3ff;
   border-radius: 5px;
 }
@@ -91,11 +93,6 @@
   font-family: "Roboto Slab", serif;
 }
 
-.reviews button:hover {
-  color: #23395bff;
-  background-color: #cbf7edff;
-}
-
 .review-button {
   background-color: #23395bff;
   color: #cbf7edff;
@@ -108,11 +105,6 @@
   font-family: "Roboto Slab", serif;
 }
 
-.review-button:hover {
-  color: #23395bff;
-  background-color: #cbf7edff;
-}
-
 .review-edit-delete {
   display: flex;
   justify-content: space-between;
@@ -120,7 +112,8 @@
 }
 
 .review-edit-delete h3 {
-  margin-left: 50px;
+  margin-left: 30px;
+  font-size: 20px;
 }
 
 @media screen and (max-width: 800px) {

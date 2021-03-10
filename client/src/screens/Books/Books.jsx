@@ -8,7 +8,9 @@ export default function Books(props) {
   return (
     <div className="books-container">
       { currentUser &&
-        <Link to='/books/new'><button>Add a Book</button></Link>
+        <div className="add-book">
+          <Link to='/books/new'><button>Add a Book</button></Link>
+        </div>
       }
       <div className="books">
         {books.map((book) => (

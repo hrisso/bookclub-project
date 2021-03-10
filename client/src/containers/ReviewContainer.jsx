@@ -1,15 +1,27 @@
 import React from 'react';
-import { useState } from 'react';
-import { Switch, Route, useHistory } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Switch, Route, useHistory, useParams } from 'react-router-dom';
+import { getOneBook } from '../services/books';
 import { destroyReview, postReview, putReview } from '../services/reviews';
 import BookDetail from '../screens/BookDetail/BookDetail';
 import ReviewCreate from '../screens/ReviewCreate/ReviewCreate';
 import ReviewEdit from '../screens/ReviewEdit/ReviewEdit';
 
 export default function ReviewContainer(props) {
+  const [book, setBook] = useState(null);
   const [reviews, setReviews] = useState([]);
   const { currentUser, handleDelete } = props;
   const history = useHistory();
+  const { id } = useParams();
+
+  useEffect(() => {
+    const fetchBook = async () => {
+      const bookData = await getOneBook(id);
+      setBook(bookData);
+      setReviews(bookData.reviews)
+    }
+    fetchBook();
+  }, [id])
 
   const handleCreateReview = async (bookid, formData) => {
     const newReview = await postReview(bookid, formData);
@@ -34,6 +46,7 @@ export default function ReviewContainer(props) {
     <Switch>
       <Route exact path='/books/:id'>
         <BookDetail
+          book={book}
           currentUser={currentUser}
           handleDelete={handleDelete}
           handleDeleteReview={handleDeleteReview}

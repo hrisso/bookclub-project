@@ -1,21 +1,9 @@
 import React from 'react';
 import './BookDetail.css';
-import { useState, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import { getOneBook } from '../../services/books';
+import { Link } from 'react-router-dom';
 
 export default function BookDetail(props) {
-  const [book, setBook] = useState(null);
-  const { currentUser, handleDelete, handleDeleteReview } = props;
-  const { id } = useParams();
-
-  useEffect(() => {
-    const fetchBook = async () => {
-      const bookData = await getOneBook(id);
-      setBook(bookData);
-    }
-    fetchBook();
-  }, [id])
+  const { book, currentUser, handleDelete, handleDeleteReview } = props;
 
   return (
     <>

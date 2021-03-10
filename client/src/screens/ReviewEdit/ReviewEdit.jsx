@@ -51,8 +51,9 @@ export default function ReviewEdit(props) {
         />
       </label>
       <label>Content:
-        <input
+        <textarea
           type='text'
+          rows={8}
           name='content'
           value={formData.content}
           onChange={handleChange}

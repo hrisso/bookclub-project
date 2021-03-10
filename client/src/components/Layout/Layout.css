@@ -1,6 +1,6 @@
 .image-container {
   height: 200px;
-  background-image: url("https://res.cloudinary.com/doas1ztbf/image/upload/v1615345055/bookshelf.png");
+  background-image: url("../../home.png");
   background-size: cover;
   /* background-position: center; */
   border-bottom: 2px solid black;

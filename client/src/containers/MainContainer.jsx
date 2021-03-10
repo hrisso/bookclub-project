@@ -37,7 +37,7 @@ export default function MainContainer(props) {
     setBooks(prevState => prevState.map((book) => {
       return book.id === Number(id) ? updatedBook : book
     }));
-    history.push('/');
+    history.push(`/books/${id}`);
   }
 
   return (

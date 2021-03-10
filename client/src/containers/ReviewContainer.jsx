@@ -33,22 +33,22 @@ export default function ReviewContainer(props) {
 
   return (
     <Switch>
-      <Route path='/books/:id'>
+      <Route exact path='/books/:id'>
         <BookDetail
           currentUser={currentUser}
           handleDelete={handleDelete}
           handleDeleteReview={handleDeleteReview}
         />
       </Route>
-      <Route path='/reviews/:id/edit'>
-        <ReviewEdit
-          reviews={reviews}
-          handleUpdateReview={handleUpdateReview} />
-      </Route>
-      <Route path='/reviews/new'>
+      <Route path='/books/:id/reviews/new'>
         <ReviewCreate
           reviews={reviews}
           handleCreateReview={handleCreateReview} />
+      </Route>
+      <Route path='/books/:id/reviews/:id/edit'>
+        <ReviewEdit
+          reviews={reviews}
+          handleUpdateReview={handleUpdateReview} />
       </Route>
     </Switch>
   )

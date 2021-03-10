@@ -35,7 +35,7 @@ export default function BookDetail(props) {
       </div>
       <div className="review-heading">
         <h2 className="review-title">Reviews</h2>
-        <Link to='/reviews/new'><button className="review-button">Add a Review</button></Link>
+        <Link to={`/books/${book?.id}/reviews/new`}><button className="review-button">Add a Review</button></Link>
       </div>
       { book?.reviews.map((review) => (
         <div className="reviews" key={review.id}>
@@ -43,7 +43,7 @@ export default function BookDetail(props) {
           <h3>{review.title}</h3>
           { review?.user_id === currentUser?.id &&
             <div>
-              <Link to={`/reviews/${review?.id}/edit`}><button>Edit</button></Link>
+              <Link to={`/books/${book?.id}/reviews/${review?.id}/edit`}><button>Edit</button></Link>
               <button onClick={() => handleDeleteReview(review?.id)}>Delete</button>
             </div>
           }

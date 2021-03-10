@@ -16,7 +16,7 @@ export default function Books(props) {
             <Link to={`/books/${book.id}`}>
               <div className="book-card">
                 <img src={book.img_url} alt={book.title}></img>
-                <p className="title">{book.title}</p>
+                <p className="card-title">{book.title}</p>
               </div>
             </Link>
           </React.Fragment>

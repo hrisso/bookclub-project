@@ -1,8 +1,8 @@
 .image-container {
   height: 200px;
-  background-image: url("https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=841&q=80");
-  /* background-size: cover; */
-  background-position: center;
+  background-image: url("https://res.cloudinary.com/doas1ztbf/image/upload/v1615345055/bookshelf.png");
+  background-size: cover;
+  /* background-position: center; */
   border-bottom: 2px solid black;
   margin-bottom: 30px;
 }

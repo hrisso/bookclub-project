@@ -39,14 +39,16 @@ export default function BookDetail(props) {
       </div>
       { book?.reviews.map((review) => (
         <div className="reviews" key={review.id}>
+          <div className="review-edit-delete">
           <h3>{review.title}</h3>
-          <p>{review.content}</p>
           { review?.user_id === currentUser?.id &&
-            <>
+            <div>
               <Link to={`/reviews/${review?.id}/edit`}><button>Edit</button></Link>
               <button onClick={() => handleDeleteReview(review?.id)}>Delete</button>
-            </>
+            </div>
           }
+          </div>
+          <p>{review.content}</p>
         </div>
       ))}
     </>

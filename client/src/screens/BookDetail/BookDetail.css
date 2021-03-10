@@ -113,6 +113,16 @@
   background-color: #cbf7edff;
 }
 
+.review-edit-delete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.review-edit-delete h3 {
+  margin-left: 50px;
+}
+
 @media screen and (max-width: 800px) {
   .book-detail {
     display: flex;
@@ -138,7 +148,14 @@
     align-items: center;
   }
 
-  .review-title {
+  .review-title,
+  .review-edit-delete h3 {
     margin-left: 0px;
+  }
+
+  .review-edit-delete {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }

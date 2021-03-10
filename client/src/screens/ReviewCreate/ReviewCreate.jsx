@@ -26,7 +26,8 @@ export default function ReviewCreate(props) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div className="add-review-container">
+    <form className="add-review-form" onSubmit={handleSubmit}>
       <h3>Add a Review</h3>
       <label>Title:
         <input
@@ -37,15 +38,17 @@ export default function ReviewCreate(props) {
         />
       </label>
       <label>Content:
-        <input
+        <textarea
           type='text'
+          rows={10}
           name='content'
           value={formData.content}
           onChange={handleChange}
         />
       </label>
       <button>Submit</button>
-    </form>
+      </form>
+    </div>
   )
 }
 

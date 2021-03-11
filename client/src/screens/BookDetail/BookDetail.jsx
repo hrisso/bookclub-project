@@ -35,7 +35,7 @@ export default function BookDetail(props) {
           <div className="review-edit-delete">
             <div className="review-titles">
               <h3>{review.title}</h3>
-              <h4>{review.user.username}</h4>
+              <p>{review.user.username}</p>
             </div>
           { review?.user_id === currentUser?.id &&
             <div>

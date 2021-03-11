@@ -121,6 +121,10 @@
   font-size: 20px;
 }
 
+.review-titles p {
+  font-weight: 500;
+}
+
 .no-reviews {
   text-align: left;
   margin-left: 12%;

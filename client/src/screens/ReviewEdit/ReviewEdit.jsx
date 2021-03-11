@@ -10,7 +10,7 @@ export default function ReviewEdit(props) {
   });
   
   const { reviews, handleUpdateReview } = props;
-  const { id } = useParams();
+  const { bookid, id } = useParams();
 
   useEffect(() => {
     const prefillFormData = () => {
@@ -35,7 +35,7 @@ export default function ReviewEdit(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    handleUpdateReview(id, formData);
+    handleUpdateReview(bookid, id, formData);
   }
 
   return (

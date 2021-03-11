@@ -23,7 +23,9 @@ export default function BookDetail(props) {
       </div>
       <div className="review-heading">
         <h2 className="review-title">Reviews</h2>
-        <Link to={`/books/${book?.id}/reviews/new`}><button className="review-button">Add a Review</button></Link>
+        { currentUser &&
+          <Link to={`/books/${book?.id}/reviews/new`}><button className="review-button">Add a Review</button></Link>
+        }
       </div>
       { book?.reviews.map((review) => (
         <div className="reviews" key={review.id}>

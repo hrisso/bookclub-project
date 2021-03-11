@@ -32,7 +32,7 @@ export default function BookDetail(props) {
           { review?.user_id === currentUser?.id &&
             <div>
               <Link to={`/books/${book?.id}/reviews/${review?.id}/edit`}><button>Edit</button></Link>
-              <button onClick={() => handleDeleteReview(review?.id)}>Delete</button>
+              <button onClick={() => handleDeleteReview(book?.id, review?.id)}>Delete</button>
             </div>
           }
           </div>

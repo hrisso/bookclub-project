@@ -26,7 +26,7 @@ export default function ReviewContainer(props) {
   const handleCreateReview = async (bookid, formData) => {
     const newReview = await postReview(bookid, formData);
     setReviews(prevState => [...prevState, newReview]);
-    history.push("/");
+    history.push(`/books/${id}`);
   }
 
   const handleUpdateReview = async (bookid, id, formData) => {
@@ -34,7 +34,7 @@ export default function ReviewContainer(props) {
     setReviews(prevState => prevState.map((review) => {
       return review.id === Number(id) ? updatedReview : review
     }));
-    history.push("/");
+    history.push(`/books/${id}`);
   }
 
   const handleDeleteReview = async (bookid, id) => {

@@ -21,7 +21,7 @@ class ReviewsController < ApplicationController
     @review.book = Book.find(params[:book_id])
 
     if @review.save
-      render json: @review, status: :created, location: @review
+      render json: @review, status: :created
     else
       render json: @review.errors, status: :unprocessable_entity
     end

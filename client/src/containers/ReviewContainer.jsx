@@ -10,6 +10,7 @@ import ReviewEdit from '../screens/ReviewEdit/ReviewEdit';
 export default function ReviewContainer(props) {
   const [book, setBook] = useState(null);
   const [reviews, setReviews] = useState([]);
+  const [refresh, setRefresh] = useState(false);
   const { currentUser, handleDelete } = props;
   const history = useHistory();
   const { id } = useParams();
@@ -21,12 +22,13 @@ export default function ReviewContainer(props) {
       setReviews(bookData.reviews);
     }
     fetchBook();
-  }, [id])
+  }, [id, refresh])
 
   const handleCreateReview = async (bookid, formData) => {
     const newReview = await postReview(bookid, formData);
     setReviews(prevState => [...prevState, newReview]);
     history.push(`/books/${id}`);
+    setRefresh(prev => !prev)
   }
 
   const handleUpdateReview = async (bookid, id, formData) => {
@@ -35,11 +37,13 @@ export default function ReviewContainer(props) {
       return review.id === Number(id) ? updatedReview : review
     }));
     history.push(`/books/${id}`);
+    setRefresh(prev => !prev)
   }
 
   const handleDeleteReview = async (bookid, id) => {
     await destroyReview(bookid, id);
-    setReviews(prevState => prevState.filter((review) => review.id !== id))
+    setReviews(prevState => prevState.filter((review) => review.id !== Number(id)))
+    setRefresh(prev => !prev)
   }
 
   return (

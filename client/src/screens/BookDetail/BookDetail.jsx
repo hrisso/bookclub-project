@@ -27,6 +27,9 @@ export default function BookDetail(props) {
           <Link to={`/books/${book?.id}/reviews/new`}><button className="review-button">Add a Review</button></Link>
         }
       </div>
+      { book?.reviews.length === 0 &&
+        <p className="no-reviews">No Reviews Yet</p>
+      }
       { book?.reviews.map((review) => (
         <div className="reviews" key={review.id}>
           <div className="review-edit-delete">

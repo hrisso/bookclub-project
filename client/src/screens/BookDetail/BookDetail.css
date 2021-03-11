@@ -116,6 +116,11 @@
   font-size: 20px;
 }
 
+.no-reviews {
+  text-align: left;
+  margin-left: 12%;
+}
+
 @media screen and (max-width: 800px) {
   .book-detail {
     display: flex;

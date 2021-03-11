@@ -49,4 +49,8 @@
     flex-direction: column;
     margin-bottom: 30px;
   }
+
+  .nav-right button {
+    margin: 0px 0px 0px 20px;
+  }
 }

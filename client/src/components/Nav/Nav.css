@@ -47,7 +47,6 @@
   .nav {
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
   }
 
   .nav-right button {

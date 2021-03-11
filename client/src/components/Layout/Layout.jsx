@@ -14,7 +14,9 @@ export default function Layout(props) {
         handleLogout={handleLogout}
       />
       <div className="image-container"></div>
-      {props.children}
+      <div className="body">
+        {props.children}
+      </div>
       <Footer />
     </div>
   )

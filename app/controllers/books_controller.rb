@@ -11,7 +11,7 @@ class BooksController < ApplicationController
 
   # GET /books/1
   def show
-    render json: @book, include: :reviews
+    render json: @book, :include => [:reviews => {:include => :user}]
   end
 
   # POST /books

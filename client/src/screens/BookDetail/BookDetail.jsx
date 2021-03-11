@@ -33,7 +33,10 @@ export default function BookDetail(props) {
       { book?.reviews.map((review) => (
         <div className="reviews" key={review.id}>
           <div className="review-edit-delete">
-            <h3>{review.title}</h3>
+            <div className="review-titles">
+              <h3>{review.title}</h3>
+              <h4>{review.user.username}</h4>
+            </div>
           { review?.user_id === currentUser?.id &&
             <div>
               <Link to={`/books/${book?.id}/reviews/${review?.id}/edit`}><button>Edit</button></Link>

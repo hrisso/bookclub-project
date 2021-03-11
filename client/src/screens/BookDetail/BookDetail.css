@@ -67,6 +67,7 @@
   margin-left: 10%;
 }
 
+
 .review-heading {
   display: flex;
   justify-content: space-between;
@@ -111,8 +112,12 @@
   align-items: center;
 }
 
-.review-edit-delete h3 {
+.review-titles {
+  text-align: left;
   margin-left: 30px;
+}
+
+.review-titles h3 {
   font-size: 20px;
 }
 

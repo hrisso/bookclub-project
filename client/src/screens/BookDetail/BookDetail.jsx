@@ -44,7 +44,7 @@ export default function BookDetail(props) {
             </div>
           }
           </div>
-          <p>{review.content}</p>
+          <p className="review-content">{review.content}</p>
         </div>
       ))}
     </>

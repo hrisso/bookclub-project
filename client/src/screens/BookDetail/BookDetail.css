@@ -82,6 +82,11 @@
   border-radius: 5px;
 }
 
+.reviews p {
+  margin: 15px 3%;
+  text-align: justify;
+}
+
 .reviews button {
   background-color: #23395bff;
   color: #cbf7edff;
@@ -123,6 +128,7 @@
 
 .review-titles p {
   font-weight: 500;
+  color: #23395bff;
 }
 
 .no-reviews {

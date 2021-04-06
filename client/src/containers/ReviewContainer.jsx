@@ -36,7 +36,7 @@ export default function ReviewContainer(props) {
     setReviews(prevState => prevState.map((review) => {
       return review.id === Number(id) ? updatedReview : review
     }));
-    history.push(`/books/${id}`);
+    history.push(`/books/${bookid}`);
     setRefresh(prev => !prev)
   }
 

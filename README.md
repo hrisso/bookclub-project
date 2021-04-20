@@ -90,21 +90,18 @@
 ``` structure
 
 src
-|__ assets/
-      |__ fonts
-      |__ images
-      |__ mockups
 |__ components/
-      |__ shared/
-          |__ Footer
-          |__ Layout
-          |__ Nav
+      |__ Footer
+      |__ Layout
+      |__ Nav
 |__ containers/
        |__ MainContainer.jsx
+       |__ ReviewContainer.jsx
 |__ screens/
        |__ BookDetail.jsx
        |__ BookCreate.jsx
        |__ BookEdit.jsx
+       |__ Books.jsx
        |__ ReviewCreate.jsx
        |__ ReviewEdit.jsx
        |__ SignIn.jsx
@@ -125,18 +122,18 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Backend Rails setup |    H     |     3 hrs      |    TBD    |    TBD   |
-| Backend CRUD Actions|    H     |     4 hrs      |     TBD     |     TBD     |
-| Authentication|    H     |     10 hrs      |     TBD     |     TBD     |
-| Frontend React setup|    H     |     3 hrs      |     TBD     |     TBD     |
-| Create Books Component|    H     |     5 hrs      |     TBD     |     TBD     |
-| Edit Books Component|    H     |     5 hrs      |     TBD     |     TBD     |
-| Create Reviews Component|    H     |     5 hrs      |     TBD     |     TBD     |
-| Edit Reviews Component|    L     |     5 hrs      |     TBD     |     TBD     |
-| Basic CSS Styling |    H     |     8 hrs      |     TBD     |     TBD     |
-| Responsive CSS / Media Queries|    L     |     5 hrs      |     TBD     |     TBD     |
-| Deployment|    H     |     2 hrs      |     TBD     |     TBD     |
-| TOTAL               |          |     55 hrs      |     TBD     |     TBD     |
+| Backend Rails setup |    H     |     3 hrs      |    2hrs   |    2hrs   |
+| Backend CRUD Actions|    H     |     4 hrs      |     5hrs     |     5hrs      |
+| Authentication|    H     |     10 hrs      |     8hrs     |     8hrs     |
+| Frontend React setup|    H     |     3 hrs      |     3hrs     |     3hrs     |
+| Create Books Component|    H     |     5 hrs      |     5hrs     |     5hrs    |
+| Edit Books Component|    H     |     5 hrs      |     8hrs    |     8hrs     |
+| Create Reviews Component|    H     |     5 hrs      |     5hrs     |     5hrs     |
+| Edit Reviews Component|    L     |     5 hrs      |     8hrs     |     8hrs     |
+| Basic CSS Styling |    H     |     8 hrs      |     8hrs     |     8hrs     |
+| Responsive CSS / Media Queries|    L     |     5 hrs      |     5hrs     |     5hrs     |
+| Deployment|    H     |     2 hrs      |     1hr     |     1hr     |
+| TOTAL               |          |     55 hrs      |     58hrs     |     58hrs     |
 
 
 
@@ -162,6 +159,37 @@ src
 ***
 
 ## Code Showcase
+I included reviews as a second level with the GET books request in the Rails backend so I could access the reviews associated with the book directly from a GET request for books in the frontend.
+
+I also needed to associate books with the user that created them in the backend POST request so I could conditionally display edit/delete buttons on the frontend.
+```
+  # GET /books/1
+  def show
+    render json: @book, :include => [:reviews => {:include => :user}]
+  end
+
+  # POST /books
+  def create
+    @book = Book.new(book_params)
+    @book.user = @current_user
+
+    if @book.save
+      render json: @book, status: :created
+    else
+      render json: @book.errors, status: :unprocessable_entity
+    end
+  end
+
+```
 
 
 ## Code Issues & Resolutions
+
+- Accessing relevant Reviews within the books data
+  - Include second level of data in Rails backend
+- Redirecting to correct books page after review create
+  - Needed to include both bookid and reviewid in handle create and handle update of reviews
+- Adding ReviewsContainer component for reviews State
+  - Moved state down to new ReviewsContainer to separate books state from review state and passed down books as props
+- Responsive styling while keeping books containers consistent when images are different sizes
+  - Needed to hardcode image size but could still adjust container size with screen size
